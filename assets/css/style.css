@@ -291,6 +291,8 @@ html{
     margin-top:15px;
     border:none;
     cursor: pointer;
+    appearance:none;
+    -webkit-appearance: none;
 }
 .btn:hover{
     background-color:rgba(219 , 219 , 219);
