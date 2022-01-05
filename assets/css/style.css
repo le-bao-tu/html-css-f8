@@ -131,7 +131,7 @@ html{
 #slider {
    margin-top:46px;
    Padding-top:50%;
-   
+   background-image: url('/assets/image/Imgchicago.jpg');
    background-position: top center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -291,7 +291,8 @@ html{
     margin-top:15px;
     border:none;
     cursor: pointer;
-    
+    appearance: none;
+    -webkit-appearance: none;
 }
 .btn:hover{
     background-color:rgba(219 , 219 , 219);
