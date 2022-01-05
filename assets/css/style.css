@@ -1,0 +1,514 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    /* chuyển động mượt mà khi khi click vào thẻ a */
+    scroll-behavior: smooth;
+    font-family:Helvetica,Arial,sans-serif;
+}
+
+::placeholder {
+    color:red
+}
+/* class dùng chung  */
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+    padding:0px 8px;
+}
+
+.col-third{
+    width:33.33333%
+}
+
+.col-half{
+    width:50%
+}
+.text-center{
+    text-align: center !important;
+}
+
+
+#main {
+    
+ overflow: hidden;
+}
+.text-white{
+    color:white !important;
+}
+#header {
+    height:46px;
+    background-color: black;
+    Position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    /* z-index : nó sẽ quết định độ nổi và cứ thằng nào có chỉ số cao sẽ đươc nằm trên  */
+    z-index: 1;
+  
+}
+#header .mobile-menu-btn,
+#header .search-btn{
+    float:right;
+    padding:0px 21px;
+}
+
+
+#header .menu-icon,
+#header .search-icon{
+    font-size:20px;
+    color:white;
+    line-height:46px;
+   
+}
+
+#header .mobile-menu-btn:hover {
+    background-color:#ccc;
+}
+
+#header .search-btn:hover{
+   background-color:red;
+   cursor: pointer;
+}
+
+
+#nav{
+    /* xác định các thành phần sẽ được hiển thị theo khối nhưng là các khối inline. */
+  display:inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+   
+}
+#nav li{
+    Position: relative;
+}
+#nav > li > a{
+    color:white;
+
+}
+#nav li a{
+    text-decoration: none;
+    /* line-height thiết lập chiều cao của một element */
+    line-height:46px;
+    padding: 0px 16px;
+    display: inline-block;
+}
+#nav > li:hover > a{
+    color:black;
+    background-color:rgba(219 , 219 , 219);
+    
+}
+
+#nav li:hover .subnav{
+    display:block;
+}
+#nav .subnav{
+   Position:absolute;
+   background-color:#fff;
+   list-style:none;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   display:none;
+   min-width: 160px;
+}
+#nav .subnav a{
+    color: black;
+    
+ }
+ #nav .subnav li:hover{
+    background-color:rgba(219 , 219 , 219);
+ }
+
+
+ 
+#slider {
+   margin-top:46px;
+   Padding-top:50%;
+   background-image: url('/assets/image/img_chicago.jpg');
+   background-position: top center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   Position: relative;
+}
+#slider .text-content{
+    Position:absolute;
+    bottom:47px;
+    color:white;
+    width:100%;
+    text-align: center;
+}
+#slider .text-heading{
+    /* độ dày của chữ  */
+    font-weight: 500;
+    font-size: 25;
+}
+#slider .text-description{
+    font-size: 15;
+    margin-top:25px;
+}
+
+
+#content .session-conntent{
+    width:800px;
+    max-width:100%;
+    /* nó sẽ đẩy sang trái sang phải một khoảng là auto */
+    margin-left:auto;
+    margin-right:auto;
+    padding:64px 20px 112px;
+
+    /* */
+
+}
+#content .session-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align:center;
+    /* khoảng cách giữa các chữ trong một đoạn text  */
+    letter-spacing:4px;
+}
+#content .session-sub-heading{
+    font-size: 15px;
+    text-align:center;
+    margin-top:25px;
+    /* chữ nghiêng  */
+    font-style: italic;
+    /* opacity độ mờ  */
+    opacity: 0.6;
+    
+}
+#content .about-text{
+    font-size: 15px;
+    margin-top:25px;
+    /* nó sẽ căn đề hai bên của một đoạn văn bản  */
+    text-align:justify;
+
+    line-height:23px;
+  
+}
+
+#content .member-name{
+    font-size:15px;
+  
+}
+#content .member-list{
+    margin-top:60px;
+    overflow:hidden;
+}
+#content .member-img{
+    margin-top:15px;
+    width:154px;
+    border-radius:4px;
+}
+
+/* Tour section */
+.tour-section{
+    background-color:black;
+    
+}
+.tickets-list{
+    background-color:white;
+    margin-top:40px;
+}
+.tickets-list li{
+    font-size:15px;
+    padding:11px 16px;
+    border-bottom:1px solid #ddd;
+    color:rgba(219, 219, 219);
+    list-style:none
+
+}
+.tickets-list .sold-out{
+    background-color:red;
+    color:white;
+    padding:3px 4px;
+    margin-left:16px;
+}
+.tickets-list .quantity{
+    float:right;
+    background-color:black;
+    color:white;
+     width:24px;
+     height:24px;
+    border-radius: 50%;
+    line-height:24px;
+    text-align:center;
+    margin-top:-3px;
+}
+
+/* Places */
+.places-list {
+
+ margin-top:20px;
+ /* khi có float thì sử dụng overflow: hidden; */
+ overflow:hidden;
+
+ 
+}
+
+.place-img {
+    /* display:block; tính chất của nó là sẽ cho mỗi một thằng nằm trên một hàng riêng biệt  */
+    display:block;
+    width:100%;
+
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body {
+    background-color:#fff;
+    color:black;
+    padding:16px;
+    font-size:15px;
+}
+.place-heading {
+    font-size:15px;
+    font-weight: 600;
+}
+.place-time {
+    color:#757575;
+    margin-top:15px;
+}
+.place-desc {
+
+    margin-top:15px;
+}
+
+.btns,
+.btn {
+
+    color:white;
+    background-color:black;
+    text-decoration:none;
+    padding:11px 16px;
+    display: inline-block;
+    margin-top:15px;
+    border:none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:rgba(219 , 219 , 219);
+    color:black;
+}
+.btn-submit{
+    float:right;
+    margin-right:8px;
+}
+/* Google Map*/
+.map-sesion img{
+    width:100%;
+    margin-top:40px
+}
+
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+} 
+
+.social-list a i{
+ color:rgba(0, 0 ,0 , 0.6);
+ font-size: 24px;
+ padding:0px 3px;
+}
+.social-list a i:hover{
+    opacity: 0.5;
+   }
+
+.copyright{
+    font-size:14px;
+    margin-top:30px;
+    color:#ccc
+}
+.copyright a{
+    color:#ccc
+}
+.copyright a:hover{
+   color:rgba(0 ,0 ,0 ,0.6);
+}
+
+/* Modal*/
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0, 0 ,0 , 0.6);
+    /* display: flex; giúp sắp xếp các thành phần một cách linh hoạt hơn  */
+    
+    /* align-items : dùng để căn giữa chiều cao  */
+    align-items:center;
+    /* justify-content :  dùng để căn giữa chiều dộng  */
+    justify-content:center;
+    display:none;
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-container{
+    width:900px;
+    background: #fff;
+    min-height: 200px;
+    position: relative;
+    /* hàm tính để khi core lại  */
+    max-width: calc(100% - 32px);   
+
+    /* sử dụng keyframes */
+    animation : modalFadeIn ease 0.6s;
+}
+.modal-header{
+    background-color: #009688;
+    height:130px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:white;
+    
+}
+
+.modal-icon{
+    margin-right: 16px;
+}
+
+.modal-close{
+    position: absolute;
+    right:0;
+    top:0;
+    padding: 12px;
+    opacity: 0.7;
+}
+.modal-close:hover{
+    cursor: pointer;
+    background-color:rgba(219,219,219);
+    opacity: 1;
+}
+
+.modal-body{
+    padding:16px;
+}
+
+.modal-label{
+    display:block;
+    padding:8px 0px;
+    margin-bottom: 12px;
+}
+.modal-input{
+    border: 1px solid #ccc;
+    width:100%;
+    padding:8px;
+    font-size:15px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 24px;
+}
+#buy-ticker{
+    width:100%;
+    background-color:#009688;
+    padding:18px ;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    border:none;
+    /* text-transform làm đậm chữ lên  */
+    text-transform: uppercase;
+}
+#buy-ticker:hover{
+    cursor: pointer;
+    background-color:#ccc;
+    
+    
+}
+.check-icon{
+    margin-left:10px;
+}
+
+.modal-footer{
+    float:right;
+    padding:16px;
+}
+.modal-footer a{
+    color:#2196F3;
+}
+
+
+/* Contact */
+.session-contact{
+    margin-top:50px;
+}
+
+.contact-content{
+    margin-top:50px;
+}
+.contact-icon{
+ padding : 5px 15px;
+}
+ 
+.col-full{
+    width: 100%;
+    margin-top:10px;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.contact-info{
+    font-size:18px;
+}
+.contact-info a:hover{
+    color:red;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+.form-control{
+    padding:10px;
+    border:1px solid #ccc;
+    width:100%;
+    /* loại bỏ viền ngoài của thẻ input  */
+    outline:none;
+}
+.contact-submit{
+    float:right;
+    padding:9px;
+    margin-right: 8px;
+    margin-top:10px;
+    background-color:black;
+    color:white;
+    border:none;
+    
+}
+.contact-submit:hover{
+    background-color:#ccc;
+    color:black;
+    cursor: pointer;
+}
+.conatct-row{
+    overflow: hidden;
+}
+
+/* @keyframes tạo ra chuyển động của một hình ảnh tĩnh  */
+@keyframes modalFadeIn {
+    /* from : bắt đầu chạy từ đâu  */
+    from {
+        /* điểm bắt đầu và chạy theo trục tọa độ Y  */
+        transform : translateY(-150px);
+        opacity: 0;
+    }
+    /* to : và kết thúc ở đâu  */
+    to {
+        transform : translateY(0);
+        opacity: 1;
+    }
+}
